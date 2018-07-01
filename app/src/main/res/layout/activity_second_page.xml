@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    tools:context=".SecondPage">
+
+            <EditText
+                android:id="@+id/edit_title_name"
+                android:hint="@string/hint_title_name"
+                android:inputType="textCapWords"
+                style="@style/EditorFieldStyle" />
+
+            <EditText
+                android:id="@+id/edit_description"
+                android:hint="@string/hint_description"
+                android:inputType="textMultiLine"
+
+                android:layout_below="@+id/edit_title_name"
+                style="@style/EditorFieldStyle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_Save"
+                android:text="@string/buttonSave"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/edit_description"
+                />
+
+
+</RelativeLayout>

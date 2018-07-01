@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         };
 
         mGoogleBtn = (SignInButton) findViewById(R.id.sign_In_Button);
-        // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -67,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
                         Toast.makeText(MainActivity.this, "You have an error", Toast.LENGTH_LONG).show();
-
                     }
                 })
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
@@ -79,10 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 signIn();
             }
         });
-
-
         }
-
 
     @Override
     protected void onStart() {
@@ -136,5 +131,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
 
 }

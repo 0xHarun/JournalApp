@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="Log_out">Log Out</string>
+    <string name="Log_Out">Log out</string>
+
+
+    <string name="action_delete_all_entries">Delete All </string>
+
+    <string name="category_overview">Overview</string>
+    <string name="hint_title_name">Title</string>
+    <string name="buttonSave">Save</string>
+    <string name="hint_description">Description</string>
+    <string name="action_save">Save</string>
+    <string name="action_Update">Update</string>
+    <string name="action_Delete">Delete</string>
+    <string name="action_delete">Delete</string>
 </resources>
