@@ -44,6 +44,7 @@ public class FirstPage extends AppCompatActivity {
 
   public  static final String Title_Name = "Title";
    public  static final String Title_ID = "TitleID";
+    public  static final String Title_Description= "Description";
     public LinearLayout linearLayout;
     private FirebaseAuth mAuth;
     private RecyclerView mEntryList;
@@ -120,7 +121,10 @@ public class FirstPage extends AppCompatActivity {
                 viewHolder.mView.setOnClickListener( new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        
+
+                        Intent intent = new Intent( FirstPage.this, editor.class);
+                        startActivity(intent);
+
                         Toast.makeText( FirstPage.this, "You clicked and item", Toast.LENGTH_SHORT ).show();
                     }
                 } );
@@ -136,81 +140,25 @@ public class FirstPage extends AppCompatActivity {
         mAuth.signOut();
     }
 
-      private  void showUpdateDialog(final String title_ID, final String title_Name){
-       AlertDialog.Builder dialogBuilder = new AlertDialog.Builder( this );
+      private  void showUpdateDialog(final String title_ID, final String title_Name) {
+          AlertDialog.Builder dialogBuilder = new AlertDialog.Builder( this );
 
-        LayoutInflater inflater = getLayoutInflater();
+          LayoutInflater inflater = getLayoutInflater();
 
-        final View dialogView = inflater.inflate( R.layout.activity_editor, null );
+          final View dialogView = inflater.inflate( R.layout.activity_editor, null );
 
-       dialogBuilder.setView( dialogView );
+          dialogBuilder.setView( dialogView );
 
-        final EditText editTextTitle = (EditText) dialogView.findViewById( R.id.edit_title );
-        final EditText editTextDescript = (EditText) dialogView.findViewById( R.id.edit_descript );
-         final Button editUpdate = (Button) dialogView.findViewById( R.id.Button_Update );
-        final Button editDelete = (Button) dialogView.findViewById( R.id.Button_Delete );
+          final EditText editTextTitle = (EditText) dialogView.findViewById( R.id.edit_title );
+          final EditText editTextDescript = (EditText) dialogView.findViewById( R.id.edit_descript );
+          final Button editUpdate = (Button) dialogView.findViewById( R.id.Button_Update );
+          final Button editDelete = (Button) dialogView.findViewById( R.id.Button_Delete );
 
-        dialogBuilder.setTitle( "Updating Data" + title_ID);
+          dialogBuilder.setTitle( "Updating Data" + title_ID );
 
-        final AlertDialog alertDialog = dialogBuilder.create();
-       alertDialog.show();
-
-     //   editUpdate.setOnClickListener( new View.OnClickListener() {
-       //     @Override
-         //  public void onClick(View view) {
-
-           //    String name = editTextTitle.getText().toString().trim();
-             //   String description = editTextDescript.getText().toString().trim();
-
-               //if (TextUtils.isEmpty( name)){
-                 //   editTextTitle.setError( "Title Required" );
-                   // return;
-                //}
-
-               // if (TextUtils.isEmpty( description )){
-                 //   editTextDescript.setError( "Description Required" );
-                 //   return;
-                }
-
-    //          // updateData( title_ID, title_Name );
-
-    //           alertDialog.dismiss();
-
-    //       }
-    //    } );
-
-
-    //    editDelete.setOnClickListener( new View.OnClickListener() {
-    //        @Override
-    //        public void onClick(View view) {
-                //           deletedata (title_ID);
-    //        }
-    //    } );
-
-
-    //  }
-
-    //  private void deletedata (String title_ID){
-    //     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("data").child( title_ID );
-    //    databaseReference.removeValue();
-
-    //   Toast.makeText( this, "Data Deleted", Toast.LENGTH_SHORT ).show();
-
-    // }
-
-  //  private boolean updateData(String title_ID, String title_Name){
-
-    //    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("data").child( title_ID );
-
-    //    data data = new data( title_ID, title_Name );
-
-    //    databaseReference.setValue( data );
-
-      //  Toast.makeText( this, "data Updated", Toast.LENGTH_SHORT ).show();
-
-    //    return  true;
-
-  //  }
+          final AlertDialog alertDialog = dialogBuilder.create();
+          alertDialog.show();
+      }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -3,9 +3,8 @@ package com.example.user.myapplication;
 public class data {
     String titleID;
     String titleName;
-
     String descriptionName;
-   // String date;
+
 
     public data(){
 
@@ -15,7 +14,6 @@ public class data {
         this.titleID = titleID;
         this.titleName = titleName;
         this.descriptionName = descriptionName;
-      //  this.date = date;
     }
 
     public String getTitleID() {
@@ -30,11 +28,7 @@ public class data {
         return descriptionName;
     }
 
-   // public String getdate() {
-   //     return date;
-   // }
-
-    public void setTitleID(String titleID) {
+       public void setTitleID(String titleID) {
         this.titleID = titleID;
     }
 
@@ -46,7 +40,4 @@ public class data {
         this.descriptionName = descriptionName;
     }
 
-   // public void setdate(String date) {
-  //      this.date = date;
-  //  }
 }
