@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearlayout"
+    tools:context=".editor">
+
+
+    <EditText
+        android:id="@+id/edit_title"
+        android:hint="@string/hint_title_name"
+        android:inputType="textCapWords"
+        style="@style/EditorFieldStyle" />
+
+    <EditText
+        android:id="@+id/edit_descript"
+        android:hint="@string/hint_description"
+        android:inputType="textCapWords"
+        style="@style/EditorFieldStyle" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button_Update"
+        android:text="@string/action_Update"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button_Delete"
+        android:text="@string/action_Delete"/>
+
+
+
+</LinearLayout>
